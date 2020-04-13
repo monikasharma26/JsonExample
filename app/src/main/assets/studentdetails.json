@@ -1,0 +1,24 @@
+[
+  {
+    "sid": 1,
+    "sname": "Monika Sharma",
+    "gender": "Female"
+  },
+
+  {
+    "sid": 2,
+    "sname": "Ikroop Virk",
+    "gender": "Female"
+  },
+  {
+    "sid": 3,
+    "sname": "Amanpreet Kaur",
+    "gender": "Female"
+  },
+  {
+    "sid": 4,
+    "sname": "Anmol SIngh",
+    "gender": "male"
+  }
+
+]
