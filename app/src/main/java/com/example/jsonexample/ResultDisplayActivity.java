@@ -17,12 +17,8 @@ public class ResultDisplayActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_result_display);
         rsid=findViewById(R.id.rsid);
-        rsname=findViewById(R.id.rsname);
-        rsgender=findViewById(R.id.rsgender);
         Intent i=getIntent();
         Student studobj = (Student) i.getExtras().getSerializable("stud");
-        rsid.setText("StudentID:"+studobj.getSid());
-        rsname.setText("StudentName:"+studobj.getSname());
-        rsgender.setText("Gender:"+studobj.getGender());
+        rsid.setText(studobj.toString());
     }
 }

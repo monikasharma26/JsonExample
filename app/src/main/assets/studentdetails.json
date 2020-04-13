@@ -1,24 +1,51 @@
 [
   {
-    "sid": 1,
+    "sid": "1",
     "sname": "Monika Sharma",
-    "gender": "Female"
+    "gender": "Female",
+    "username": "MS123",
+    "email": "ms@agmail.com",
+    "street": "Abc",
+    "suite": "Apt. 556",
+    "city": "Toronto",
+    "zipcode": "123-863-1234",
+    "country": "US"
   },
-
   {
-    "sid": 2,
+    "sid": "2",
     "sname": "Ikroop Virk",
-    "gender": "Female"
+    "gender": "Female",
+    "username": "MS123",
+    "email": "ms@agmail.com",
+    "street": "Abc",
+    "suite": "Apt. 556",
+    "city": "Toronto",
+    "zipcode": "123-863-1234",
+    "country": "US"
   },
   {
-    "sid": 3,
+    "sid": "3",
     "sname": "Amanpreet Kaur",
-    "gender": "Female"
+    "gender": "Female",
+    "username": "MS123",
+    "email": "ms@agmail.com",
+    "street": "Abc",
+    "suite": "Apt. 556",
+    "city": "Toronto",
+    "zipcode": "123-863-1234",
+    "country": "US"
   },
   {
-    "sid": 4,
+    "sid": "4",
     "sname": "Anmol SIngh",
-    "gender": "male"
+    "gender": "male",
+    "username": "MS123",
+    "email": "ms@agmail.com",
+    "street": "Abc",
+    "suite": "Apt. 556",
+    "city": "Toronto",
+    "zipcode": "123-863-1234",
+    "country": "US"
   }
 
 ]

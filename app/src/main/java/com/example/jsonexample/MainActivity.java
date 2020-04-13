@@ -4,7 +4,9 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
+import android.widget.Adapter;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
@@ -31,11 +33,13 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         processJSON();
+        Log.d("hshsh",String.valueOf(studentArrayList.size()));
         lstStudentData = findViewById(R.id.lst1);
         iname = new ArrayList<>();
         for (Student str : studentArrayList) {
             iname.add(str.getSname());
         }
+
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, iname );
         lstStudentData.setAdapter(adapter);
 
@@ -69,37 +73,24 @@ public class MainActivity extends AppCompatActivity {
         String js=loadJSONFromAsset();
         if(js !=null)
         {
-            // Log.d("json",js);
             try {
                 JSONArray mJSONArray=new JSONArray(js);
                 studentArrayList = new ArrayList<>();
                 for(int i=0;i<mJSONArray.length();i++) {
-
                     JSONObject mJSONObj=mJSONArray.getJSONObject(i);
-                    //  Log.d("mjson", mJSONObj.toString());
                     if(mJSONObj.has("sid")) {
                         String id = mJSONObj.getString("sid");
                         String sname = mJSONObj.getString("sname");
                         String gender = mJSONObj.getString("gender");
-                        //   Log.d("mjson_ID", String.valueOf(id));
-                        //   Log.d("mjson_name", String.valueOf(sname));
-                        //   Log.d("mjson_gender", String.valueOf(gender));
-                        studentArrayList.add(new  Student(String.valueOf(id),String.valueOf(sname), String.valueOf(gender)));
-
-                        //  for (Student str : studentArrayList) {
-                        //      System.out.println(str.getSid());
-                        //  System.out.println(str.getSname());
-
-                        // }
-                        System.out.println("Using Iterator class");
-                        System.out.println("-----------------------");
-                        Iterator<Student> it = studentArrayList.iterator();
-                        while(it.hasNext()){
-                            System.out.println(it.next().getSname());
-                        }
+                        String userName = mJSONObj.getString("username");
+                        String email = mJSONObj.getString("email");
+                        String street = mJSONObj.getString("street");
+                        String suite = mJSONObj.getString("suite");
+                        String city = mJSONObj.getString("city");
+                        String zipcode = mJSONObj.getString("zipcode");
+                        String country = mJSONObj.getString("country");
+                        studentArrayList.add(new  Student(id,sname,gender,userName,email,street,suite, city,zipcode,country));
                     }
-
-
                 }
                 s.setStudentArrayList(studentArrayList);
             } catch (JSONException e) {
